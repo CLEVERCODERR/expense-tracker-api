@@ -1,4 +1,4 @@
-# Personal Finance Tracker
+# Personal Finance Tracker (API and FrontEnd)
 
 A **full-stack Personal Finance Tracker** built with **Python, Flask, and JavaScript**. Users can **add, view, and summarize expenses** via a **REST API backend** and a **dynamic HTML/JS frontend**, with data persisted in a JSON file.
 
