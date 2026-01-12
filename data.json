@@ -1,0 +1,64 @@
+{
+  "expenses": [
+    {
+      "amount": 8.99,
+      "category": "Coffee",
+      "description": "Morning coffee at Starbucks",
+      "date": "2026-01-02 08:15:00"
+    },
+    {
+      "amount": 1200.00,
+      "category": "Rent",
+      "description": "January apartment rent",
+      "date": "2026-01-01 10:00:00"
+    },
+    {
+      "amount": 65.50,
+      "category": "Groceries",
+      "description": "Weekly grocery shopping",
+      "date": "2026-01-03 17:45:00"
+    },
+    {
+      "amount": 25.00,
+      "category": "Transport",
+      "description": "Monthly bus pass",
+      "date": "2026-01-04 09:00:00"
+    },
+    {
+      "amount": 50.00,
+      "category": "Entertainment",
+      "description": "Concert ticket",
+      "date": "2026-01-05 20:30:00"
+    },
+    {
+      "amount": 19.99,
+      "category": "Subscription",
+      "description": "Spotify monthly plan",
+      "date": "2026-01-06 12:00:00"
+    },
+    {
+      "amount": 35.75,
+      "category": "Dining",
+      "description": "Dinner with friends",
+      "date": "2026-01-07 19:15:00"
+    },
+    {
+      "amount": 45.25,
+      "category": "Shopping",
+      "description": "New shoes",
+      "date": "2026-01-08 14:30:00"
+    },
+    {
+      "amount": 12.50,
+      "category": "Coffee",
+      "description": "Afternoon coffee",
+      "date": "2026-01-09 15:45:00"
+    },
+    {
+      "amount": 100.00,
+      "category": "Utilities",
+      "description": "Electricity bill",
+      "date": "2026-01-10 10:00:00"
+    }
+  ]
+}
