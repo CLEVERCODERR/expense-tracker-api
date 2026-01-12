@@ -1,6 +1,8 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import json
 from datetime import datetime
+
+app = Flask(__name__)
 
 DATA_FILE = "data.json"
 
@@ -13,21 +15,23 @@ def load_expenses():
     except FileNotFoundError:
         return []
 
-#savee expenses to JSON
+#save expenses to JSON
 def save_expenses(expenses):
     with open(DATA_FILE, "w") as f:
         json.dump({"expenses": expenses}, f, indent=4)
 
-#Flask app
-app = Flask(__name__)
+#frontend route
+@app.route("/")
+def index():
+    return render_template("index.html")
 
-#expenses
+#get all expenses
 @app.route("/expenses", methods=["GET"])
 def get_expenses():
     expenses = load_expenses()
     return jsonify(expenses), 200
 
-#new expense
+#add a new expense
 @app.route("/expenses", methods=["POST"])
 def add_expense():
     data = request.get_json()
@@ -57,7 +61,7 @@ def total_expenses():
     total = sum(e["amount"] for e in expenses)
     return jsonify({"total_expenses": total}), 200
 
-#get total by category
+#summary by category
 @app.route("/expenses/summary", methods=["GET"])
 def summary_by_category():
     expenses = load_expenses()
@@ -68,4 +72,3 @@ def summary_by_category():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
